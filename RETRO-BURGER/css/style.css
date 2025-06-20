@@ -1,0 +1,245 @@
+/* --- GERAL E FONTES --- */
+
+/* Importa as fontes Fredoka One e Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;700&family=Righteous&display=swap');
+
+/* Define estilos globais para todos os elementos */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos internos padrão */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo de tamanho do elemento */
+}
+
+@font-face {
+  font-family: 'RetroCool'; /* 1. Crie um nome para sua fonte */
+  src: url('/fonts/RetroCool-Regular.woff2'); /* 2. Indique o caminho do arquivo */
+}
+
+/* Define estilos gerais para o corpo da página */
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte padrão */
+    background-color: #FFA500; /* Cor de fundo laranja */
+    color: #FDECC7; /* Cor para o texto */
+}
+
+/* Estilo dos títulos h1 e h2 */
+h1, h2 {
+    font-family: 'RetroCool'; /* Fonte mais decorativa para títulos */
+    text-transform: uppercase; /* Texto em caixa alta */
+    color: #FFB001; /* Cor marrom escura */
+    text-shadow: 3px 3px 0px #8F281A; /* Sombra branca para dar destaque */
+    -webkit-text-stroke: 0.7px #551108; /* Contorno marrom no texto */
+}
+
+/* --- HEADER E NAVEGAÇÃO --- */
+
+/* Estilo do cabeçalho */
+header {
+    display: flex; /* Layout flexível */
+    justify-content: space-between; /* Espaço entre logo e menu */
+    align-items: center; /* Alinhamento vertical */
+    padding: 15px 5%; /* Espaçamento interno */
+    position: fixed; /* Fixa o header no topo */
+    width: 90%; /* Largura relativa */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Fica sobre outros elementos */
+}
+
+/* Estiliza a lista de navegação */
+nav ul {
+    list-style: none; /* Remove marcadores de lista */
+    display: flex; /* Exibe os itens lado a lado */
+    gap: 25px; /* Espaço entre itens */
+}
+
+/* Estilo dos links de navegação */
+nav ul li a {
+    text-decoration: none; /* Remove sublinhado */
+    color: #4C2F1D; /* Cor do texto */
+    font-weight: 700; /* Texto em negrito */
+    font-size: 1rem; /* Tamanho da fonte */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Cantos arredondados */
+    transition: all 0.3s ease; /* Animação suave */
+}
+
+/* Estilo para o link ativo ou quando passa o mouse */
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #4C2F1D; /* Fundo marrom */
+    color: #FFFFFF; /* Texto branco */
+}
+
+/* --- ESTILOS DA PÁGINA HOME --- */
+
+/* Plano de fundo com listras diagonais */
+.main-home {
+    background: #F27B35;
+    overflow: hidden; /* Esconde conteúdo que ultrapassar o container */
+    /* Propriedades da imagem de fundo no corpo */
+    background-image: url('/images/back2 1.png'); /* Substitua pelo caminho da sua imagem */
+    background-repeat: no-repeat;
+    background-position: top center; /* Alinha a imagem no topo da viewport e centraliza */
+    background-size: 100vw 65vh; /* A CHAVE: 100% da largura da viewport, 50% da altura da viewport */
+    background-attachment: fixed; /* A CHAVE: Faz a imagem permanecer fixa no scroll */
+}
+
+/* Sessão de destaque (hero) */
+.hero {
+    display: flex; /* Layout lado a lado */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    min-height: 100vh; /* Altura mínima de uma tela inteira */
+    padding-left: 5%; /* Espaçamento interno à esquerda */
+}
+
+/* Estilo da caixa de texto da hero section */
+.hero-text {
+    flex-basis: 50%; /* Ocupar 50% do espaço */
+    max-width: 500px; /* Largura máxima */
+}
+
+/* Estilo do título principal */
+.hero-text h1 { 
+    font-size: 120px;; /* Tamanho responsivo */
+    line-height: 1; /* Espaçamento entre linhas */
+}
+
+/* Estilo do parágrafo */
+.hero-text p {
+    font-size: 30px; /* Tamanho da fonte */
+    color: #FDECC7;
+    margin: 20px 0 30px 0; /* Espaçamento externo */
+    font-weight: 700; /* Negrito */
+}
+
+/* Botão de chamada para ação */
+.cta-button {
+    background-color: #8F281A; /* Fundo marrom */
+    color: #FDECC7; /* Texto branco */
+    border: none; /* Sem borda */
+    padding: 15px 35px; /* Espaçamento interno */
+    font-size: 25px; /* Tamanho da fonte */
+    font-family: 'Righteous', sans-serif;
+    border-radius: 20px; /* Cantos arredondados */
+    cursor: pointer; /* Muda cursor ao passar */
+    transition: transform 0.2s ease; /* Animação suave no hover */
+}
+
+/* Efeito de zoom no botão ao passar o mouse */
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* Container da imagem hero */
+.burger-image {
+    flex-basis: 50%; /* Ocupar 50% do espaço */
+}
+
+/* Estilo da imagem hero */
+.burger-image img {
+    width: 180%; /* Aumenta o tamanho da imagem */
+    max-width: 800px; /* Largura máxima */
+    transform: translateX(20%); /* Move a imagem 10% para a direita */
+}
+
+/* --- ESTILOS DA PÁGINA SOBRE NÓS --- */
+
+/* Container da seção "Sobre Nós" */
+.main-sobre {
+    background: #F27B35; /* Fundo laranja escuro */
+    min-height: 100vh; /* Altura mínima de uma tela inteira */
+    display: flex; /* Layout flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 120px 5%; /* Espaçamento interno */
+    /* Propriedades da imagem de fundo no corpo */
+    background-image: url('/images/topdemais 1.png'); /* Substitua pelo caminho da sua imagem */
+    background-repeat: no-repeat;
+    background-position: top center; /* Alinha a imagem no topo da viewport e centraliza */
+    background-size: 100vw 25vh; /* A CHAVE: 100% da largura da viewport, 25% da altura da viewport */
+    background-attachment: fixed; /* A CHAVE: Faz a imagem permanecer fixa no scroll */
+}
+
+/* Caixa de conteúdo centralizada */
+.content-box {
+    background-color: transparent; /* Sem fundo */
+    text-align: center; /* Alinhamento centralizado */
+    max-width: 800px; /* Largura máxima */
+}
+
+/* Título da seção */
+.content-box h2 {
+    font-size: 120px;; /* Tamanho responsivo */
+    line-height: 1; /* Espaçamento entre linhas */
+}
+
+/* Parágrafo da seção */
+.content-box p {
+    font-size: 23px; /* Tamanho da fonte */
+    line-height: 1.7; /* Espaçamento entre linhas */
+    margin-bottom: 1.2rem; /* Espaçamento inferior */
+    color: #FDECC7; /* Cor do texto */
+    font-weight: 700;
+}
+
+/* Estilo da assinatura (nome ou destaque no final) */
+.content-box .signature {
+    font-weight: 700; /* Negrito */
+    font-size: 1.4rem; /* Tamanho da fonte */
+    margin-top: 30px; /* Espaçamento superior */
+}
+
+/* --- ESTILOS DA PÁGINA CARDÁPIO --- */
+
+/* Container da seção "Cardápio" */
+.main-cardapio {
+    background: #F27B35; /* Fundo laranja escuro */
+    min-height: 100vh; /* Altura mínima de uma tela inteira */
+    padding: 120px 5%; /* Espaçamento interno */
+    text-align: center; /* Alinhamento do texto */
+    /* Propriedades da imagem de fundo no corpo */
+    background-image: url('/images/topdemais 1.png'); /* Substitua pelo caminho da sua imagem */
+    background-repeat: no-repeat;
+    background-position: top center; /* Alinha a imagem no topo da viewport e centraliza */
+    background-size: 100vw 25vh; /* A CHAVE: 100% da largura da viewport, 25% da altura da viewport */
+    background-attachment: fixed; /* A CHAVE: Faz a imagem permanecer fixa no scroll */
+}
+
+/* Título da seção */
+.main-cardapio h2 {
+    font-size: 120px;; /* Tamanho responsivo */
+    line-height: 1; /* Espaçamento entre linhas */
+    /* --- NOVOS AJUSTES PARA ALTURA E POSIÇÃO --- */
+    height: 150px; /* Defina a mesma altura fixa aqui */
+    display: flex; /* Permite usar alinhamento para centralizar verticalmente */
+    align-items: center; /* Centraliza o texto verticalmente dentro da altura definida */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    margin-top: -30px; /* Move o título 30px para cima */
+    margin-bottom: 30px; /* Ajuste a margem inferior para compensar a subida */
+}
+
+/* Grade do cardápio */
+.menu-grid {
+    display: grid; /* Layout em grade */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Colunas responsivas */
+    gap: 30px; /* Espaço entre os itens */
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* Estilo das imagens dos itens do cardápio */
+.menu-item img {
+    width: 100%; /* Largura total do container */
+    height: 100%; /* Altura total do container */
+    object-fit: cover; /* Garante que a imagem cubra o container */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra suave */
+    transition: transform 0.3s ease; /* Animação suave no hover */
+}
+
+/* Efeito de zoom ao passar o mouse */
+.menu-item img:hover {
+    transform: scale(1.03);
+}
